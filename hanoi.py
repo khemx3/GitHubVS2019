@@ -10,13 +10,27 @@ class Disk(object):
         self.dwidth = width
 
     def showdisk(self):
-        pass 
+        turtle.lt(90)
+        turtle.penup()
+        turtle.goto(self.dxpos,self.dypos)
+        turtle.pendown()
+        turtle.rt(90)
+        for x in range(2):
+            turtle.fd(self.dwidth/2)
+            turtle.lt(90)
+            turtle.fd(self.dheight)
+            turtle.lt(90)
+            turtle.fd(self.dwidth/2)
 
     def newpos(self,xpos,ypos):
-        pass
+        self.dxpos = xpos
+        self.dypos = ypos
         
     def cleardisk(self):
-        pass
+        turtle.pencolor("WHITE")
+        self.showdisk()
+        turtle.pencolor("BLACK")
+  
 
 class Pole(object):
 
