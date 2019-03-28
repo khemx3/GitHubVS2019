@@ -2,6 +2,9 @@ import sys
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
+import Simple_drawing_window1 as wd1
+import Simple_drawing_window2 as wd2
+import Simple_drawing_window3 as wd3
 
 class Simple_drawing_window(QWidget):
     def __init__ (self):
@@ -37,6 +40,16 @@ def main():
 
     w = Simple_drawing_window()
     w.show()
+
+    k = wd1.Simple_drawing_window1()
+    k.show()
+
+    p = wd2.Simple_drawing_window2()
+    p.show()
+
+    b = wd3.Simple_drawing_window3()
+    b.show()
+
 
     return app.exec_()
 
